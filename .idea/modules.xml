@@ -4,6 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/FrameProject.iml" filepath="$PROJECT_DIR$/FrameProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/applymodule/applymodule.iml" filepath="$PROJECT_DIR$/applymodule/applymodule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/baselibrary/baselibrary.iml" filepath="$PROJECT_DIR$/baselibrary/baselibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/frame-project.iml" filepath="$PROJECT_DIR$/frame-project.iml" />
     </modules>
   </component>
 </project>
