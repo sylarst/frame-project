@@ -1,2 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.age.mac.baselibrary" />
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.age.mac.baselibrary">
+
+    <application android:name=".utils.BaseApplication"
+        tools:replace="android:name"
+        />
+</manifest>
