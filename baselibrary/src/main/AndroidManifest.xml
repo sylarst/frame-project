@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.age.mac.baselibrary">
 
-    <application android:name=".utils.BaseApplication"
+    <application android:name=".base.BaseApplication"
         tools:replace="android:name"
         />
 </manifest>

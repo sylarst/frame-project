@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">BaseLibrary</string>
+
+    <string name="network_error">网络错误，请检查网络连接。</string>
 </resources>
