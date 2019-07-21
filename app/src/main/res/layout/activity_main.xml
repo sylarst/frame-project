@@ -1,18 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context="com.age.mac.frameproject.MainActivity">
 
-    <TextView
+    <EditText
+        android:layout_marginTop="10dip"
+        android:layout_gravity="center_horizontal"
+        android:hint="username"
+        android:id="@+id/av_main_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+         />
 
-</android.support.constraint.ConstraintLayout>
+    <EditText
+        android:layout_marginTop="10dip"
+        android:layout_gravity="center_horizontal"
+        android:hint="password"
+        android:id="@+id/av_main_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <Button
+        android:id="@+id/login_confirm"
+        android:layout_marginTop="20dip"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/sign_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>
