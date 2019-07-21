@@ -1,14 +1,15 @@
-package com.age.mac.baselibrary.utils;
+package com.age.mac.baselibrary.base;
 
 import android.app.Application;
 
 import com.alibaba.android.arouter.launcher.ARouter;
 
+
 /**
- * Created by mac on 2019/7/10.
+ * Created by mac on 2019/7/11.
  */
 
-public class BaseApplication extends Application{
+public class BaseApplication extends Application {
 
     @Override
     public void onCreate() {
@@ -17,4 +18,5 @@ public class BaseApplication extends Application{
         ARouter.openDebug();   // 开启调试模式(如果在InstantRun模式下运行，必须开启调试模式！线上版本需要关闭,否则有安全风险)
         ARouter.init(this); // 尽可能早，推荐在Application中初始化
     }
+
 }
