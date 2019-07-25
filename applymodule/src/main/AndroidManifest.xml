@@ -3,14 +3,13 @@
     package="com.age.mac.applymodule">
 
     <application
-        android:name="com.age.mac.baselibrary.utils.BaseApplication"
+        android:name="com.age.mac.baselibrary.base.BaseApplication"
         tools:replace="android:name"
         >
         <activity android:name=".ApplyActivity">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
         </activity>
     </application>

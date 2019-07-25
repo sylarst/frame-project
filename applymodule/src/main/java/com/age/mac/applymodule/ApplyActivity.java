@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
-import com.age.mac.baselibrary.utils.ArouterConfig;
+import com.age.mac.baselibrary.base.ArouterConfig;
 import com.alibaba.android.arouter.facade.annotation.Route;
 
 /**
