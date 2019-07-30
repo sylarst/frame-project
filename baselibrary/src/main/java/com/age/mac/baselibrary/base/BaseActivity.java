@@ -1,6 +1,6 @@
 package com.age.mac.baselibrary.base;
 
-import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -18,17 +18,19 @@ import butterknife.Unbinder;
 
 public abstract class BaseActivity extends AppCompatActivity {
 
+    protected Context mContext;
     private Unbinder unbinder;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        mContext=this;
         EventBus.getDefault().register(this);
         setContentView(this.getLayoutId());
         unbinder = ButterKnife.bind(this);
         initView();
     }
+
 
     @Subscribe(threadMode = ThreadMode.POSTING)
     public void onPostEvent(CommonEvent event) {

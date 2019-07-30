@@ -9,7 +9,7 @@ package com.age.mac.baselibrary.base;
  */
 public class CommonEvent {
     private int mWhat;
-    private String mMessage = "";
+    private String mMessage;
     public CommonEvent(int what) {
         this(what, null);
     }
@@ -19,20 +19,19 @@ public class CommonEvent {
         mMessage = message;
     }
 
-    public String getMessage() {
-        return mMessage;
-    }
-
-    public void setMessage(String message) {
-        mMessage = message;
-    }
-
-
-    public int getWhat() {
+    public int getmWhat() {
         return mWhat;
     }
 
-    public void setWhat(int what) {
-        mWhat = what;
+    public void setmWhat(int mWhat) {
+        this.mWhat = mWhat;
+    }
+
+    public Object getmMessage() {
+        return mMessage;
+    }
+
+    public void setmMessage(String mMessage) {
+        this.mMessage = mMessage;
     }
 }

@@ -1,22 +1,23 @@
-package com.age.mac.frameproject;
+package com.age.mac.frameproject.activity;
 
+import android.content.Context;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
-import com.age.mac.baselibrary.base.ArouterConfig;
-import com.age.mac.baselibrary.base.BaseActivity;
 import com.age.mac.baselibrary.base.BaseMvpActivity;
 import com.age.mac.baselibrary.base.CommonEvent;
 import com.age.mac.baselibrary.bean.BaseObjectBean;
 import com.age.mac.baselibrary.utils.LLog;
+import com.age.mac.frameproject.R;
 import com.age.mac.frameproject.bean.LoginBean;
 import com.age.mac.frameproject.contract.MainContract;
 import com.age.mac.frameproject.presenter.MainPresenter;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
+import com.example.hg.uselibrary.ArouterConfig;
+
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -24,6 +25,8 @@ import butterknife.OnClick;
 
 @Route(path = ArouterConfig.Main_Activity)
 public class MainActivity extends BaseMvpActivity<MainPresenter> implements MainContract.View {
+
+    private Context mContext;
 
     @BindView(R.id.av_main_name)
     EditText mNameTv;
@@ -38,15 +41,16 @@ public class MainActivity extends BaseMvpActivity<MainPresenter> implements Main
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mContext=this;
 //        ARouter.getInstance().build(ArouterConfig.Main_Test).navigation();
 //        ARouter.getInstance().build(ArouterConfig.Apply_Activity).navigation();
         mPresenter = new MainPresenter();
         mPresenter.attachView(this);
     }
 
-    @Override
+    @Subscribe(threadMode = ThreadMode.POSTING)
     public void onPostEvent(CommonEvent event) {
-        super.onPostEvent(event);
+
     }
 
     @Override

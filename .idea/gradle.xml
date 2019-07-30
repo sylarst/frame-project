@@ -12,7 +12,8 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/applymodule" />
             <option value="$PROJECT_DIR$/baselibrary" />
-            <option value="$PROJECT_DIR$/mylibrary" />
+            <option value="$PROJECT_DIR$/login_module" />
+            <option value="$PROJECT_DIR$/sourcelibrary" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
