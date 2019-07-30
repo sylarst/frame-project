@@ -42,8 +42,6 @@ public class MainActivity extends BaseMvpActivity<MainPresenter> implements Main
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mContext=this;
-//        ARouter.getInstance().build(ArouterConfig.Main_Test).navigation();
-//        ARouter.getInstance().build(ArouterConfig.Apply_Activity).navigation();
         mPresenter = new MainPresenter();
         mPresenter.attachView(this);
     }

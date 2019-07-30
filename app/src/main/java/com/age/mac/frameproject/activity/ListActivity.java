@@ -51,4 +51,15 @@ public class ListActivity extends BaseActivity {
     public void initView() {
 
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+        Intent intent=new Intent(this, EventPostService.class);
+        stopService(intent);
+
+        Intent intent2=new Intent(this, EventHandlingService.class);
+        stopService(intent2);
+    }
 }
