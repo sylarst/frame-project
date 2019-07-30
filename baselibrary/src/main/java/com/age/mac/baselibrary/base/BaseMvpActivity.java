@@ -1,6 +1,7 @@
 package com.age.mac.baselibrary.base;
 
 import android.arch.lifecycle.Lifecycle;
+import android.arch.lifecycle.LifecycleOwner;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
@@ -42,6 +43,6 @@ public abstract class BaseMvpActivity<T extends BasePresenter> extends BaseActiv
     @Override
     public <T> AutoDisposeConverter<T> bindAutoDispose() {
         return AutoDispose.autoDisposable(AndroidLifecycleScopeProvider
-                .from(this, Lifecycle.Event.ON_DESTROY));
+                .from((LifecycleOwner) this, Lifecycle.Event.ON_DESTROY));
     }
 }
