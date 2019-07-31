@@ -42,7 +42,8 @@ public abstract class BaseMvpActivity<T extends BasePresenter> extends BaseActiv
      */
     @Override
     public <T> AutoDisposeConverter<T> bindAutoDispose() {
-        return AutoDispose.autoDisposable(AndroidLifecycleScopeProvider
-                .from((LifecycleOwner) this, Lifecycle.Event.ON_DESTROY));
+//        return AutoDispose.autoDisposable(AndroidLifecycleScopeProvider
+//                .from(this, Lifecycle.Event.ON_DESTROY));
+        return null;
     }
 }

@@ -27,7 +27,15 @@
         android:id="@+id/login_confirm"
         android:layout_marginTop="20dip"
         android:layout_gravity="center_horizontal"
-        android:text="@string/sign_in"
+        android:text="sign_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/login_regist"
+        android:layout_marginTop="20dip"
+        android:layout_gravity="center_horizontal"
+        android:text="注册"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 </LinearLayout>

@@ -10,10 +10,10 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/applymodule" />
-            <option value="$PROJECT_DIR$/baselibrary" />
+            <option value="$PROJECT_DIR$/apply_module" />
+            <option value="$PROJECT_DIR$/base_library" />
             <option value="$PROJECT_DIR$/login_module" />
-            <option value="$PROJECT_DIR$/sourcelibrary" />
+            <option value="$PROJECT_DIR$/source_library" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

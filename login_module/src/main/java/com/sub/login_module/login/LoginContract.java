@@ -24,6 +24,7 @@ public interface LoginContract {
         void onError(Throwable throwable);
 
         void onSuccess(BaseObjectBean<LoginBean> bean);
+
     }
 
     interface Presenter {

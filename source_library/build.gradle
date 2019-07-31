@@ -1,5 +1,5 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.jakewharton.butterknife'
+
 android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -16,22 +16,15 @@ android {
                 arguments = [ moduleName : project.getName() ]
             }
         }
-
     }
 
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
 
-}
-
-repositories {
-    flatDir {
-        dirs 'libs'
-    }
 }
 
 dependencies {
@@ -69,11 +62,5 @@ dependencies {
     implementation "com.jakewharton:butterknife:${BUTTERKNIFE_VERSION}"
     annotationProcessor "com.jakewharton:butterknife-compiler:${BUTTERKNIFE_VERSION}"
 
-    implementation project(':baselibrary')
-//    implementation project(':applymodule')
-    implementation project(':sourcelibrary')
-//    implementation project(':login_module')
-//    implementation(name:'baselibrary', ext:'aar')
-//    implementation(name:'applymodule', ext:'aar')
-
+    implementation project(':base_library')
 }

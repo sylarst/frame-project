@@ -25,7 +25,7 @@ public class LoginPresenter extends BasePresenter<LoginContract.View> implements
 
         JSONObject params = new JSONObject();
         try {
-            params.put("pushKey", "key_push_client_id");
+            params.put("pushKey", "");
             params.put("loginSource", "1");
             params.put("mobile", username);
             params.put("password", password);
@@ -36,7 +36,7 @@ public class LoginPresenter extends BasePresenter<LoginContract.View> implements
         mView.showLoading();
         model.login(params)
                 .compose(RxScheduler.<BaseObjectBean<LoginBean>>Flo_io_main())
-                .as(mView.<BaseObjectBean<LoginBean>>bindAutoDispose())
+//                .as(mView.<BaseObjectBean<LoginBean>>bindAutoDispose())
                 .subscribe(new Consumer<BaseObjectBean<LoginBean>>() {
                     @Override
                     public void accept(BaseObjectBean<LoginBean> bean) throws Exception {

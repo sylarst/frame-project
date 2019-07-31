@@ -69,9 +69,9 @@ dependencies {
     implementation "com.jakewharton:butterknife:${BUTTERKNIFE_VERSION}"
     annotationProcessor "com.jakewharton:butterknife-compiler:${BUTTERKNIFE_VERSION}"
 
-    implementation project(':baselibrary')
+    implementation project(':base_library')
 //    implementation project(':applymodule')
-    implementation project(':sourcelibrary')
+    implementation project(':source_library')
 //    implementation project(':login_module')
 //    implementation(name:'baselibrary', ext:'aar')
 //    implementation(name:'applymodule', ext:'aar')

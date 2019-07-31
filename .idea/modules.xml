@@ -3,11 +3,13 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/applymodule/applymodule.iml" filepath="$PROJECT_DIR$/applymodule/applymodule.iml" />
-      <module fileurl="file://$PROJECT_DIR$/baselibrary/baselibrary.iml" filepath="$PROJECT_DIR$/baselibrary/baselibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/apply_module/apply_module.iml" filepath="$PROJECT_DIR$/apply_module/apply_module.iml" />
+      <module fileurl="file://$PROJECT_DIR$/apply_module/applymodule.iml" filepath="$PROJECT_DIR$/apply_module/applymodule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/base_library/base_library.iml" filepath="$PROJECT_DIR$/base_library/base_library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/base_library/baselibrary.iml" filepath="$PROJECT_DIR$/base_library/baselibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/frame-project.iml" filepath="$PROJECT_DIR$/frame-project.iml" />
       <module fileurl="file://$PROJECT_DIR$/login_module/login_module.iml" filepath="$PROJECT_DIR$/login_module/login_module.iml" />
-      <module fileurl="file://$PROJECT_DIR$/sourcelibrary/sourcelibrary.iml" filepath="$PROJECT_DIR$/sourcelibrary/sourcelibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/source_library/source_library.iml" filepath="$PROJECT_DIR$/source_library/source_library.iml" />
     </modules>
   </component>
 </project>

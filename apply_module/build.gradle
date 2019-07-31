@@ -1,9 +1,8 @@
 apply plugin: 'com.android.library'
-
+apply plugin: 'com.jakewharton.butterknife'
 android {
+    buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdkVersion rootProject.ext.compileSdkVersion
-
-
 
     defaultConfig {
         minSdkVersion MIN_SDK_VERSION.toInteger()
@@ -29,9 +28,13 @@ android {
 
 }
 
-dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
 
+dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "com.android.support:appcompat-v7:${APPCOMPAT_V7_VERSION}"
     implementation "com.android.support.constraint:constraint-layout:${CONSTRAINT_VERSION}"
@@ -65,4 +68,12 @@ dependencies {
     //butterknife
     implementation "com.jakewharton:butterknife:${BUTTERKNIFE_VERSION}"
     annotationProcessor "com.jakewharton:butterknife-compiler:${BUTTERKNIFE_VERSION}"
+
+    implementation project(':base_library')
+//    implementation project(':applymodule')
+    implementation project(':source_library')
+//    implementation project(':login_module')
+//    implementation(name:'baselibrary', ext:'aar')
+//    implementation(name:'applymodule', ext:'aar')
+
 }

@@ -10,6 +10,7 @@ import com.age.mac.baselibrary.base.BaseMvpActivity;
 import com.age.mac.baselibrary.bean.BaseObjectBean;
 import com.age.mac.baselibrary.utils.LLog;
 import com.alibaba.android.arouter.facade.annotation.Route;
+import com.alibaba.android.arouter.launcher.ARouter;
 import com.example.hg.uselibrary.ArouterConfig;
 import com.sub.login_module.R;
 
@@ -31,6 +32,12 @@ public class LoginActivity extends BaseMvpActivity<LoginPresenter> implements Lo
             @Override
             public void onClick(View view) {
                 mPresenter.login(mNameTv.getText().toString(),mPasswordTv.getText().toString());
+            }
+        });
+        findViewById(R.id.login_regist).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ARouter.getInstance().build(ArouterConfig.Login_registActivity).navigation();
             }
         });
     }
