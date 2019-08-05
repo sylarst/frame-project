@@ -37,6 +37,8 @@ repositories {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "com.android.support:appcompat-v7:${APPCOMPAT_V7_VERSION}"
+    implementation "com.android.support:support-v4:${SUPPORT_V4_VERSION}"
+    implementation "com.android.support:recyclerview-v7:${APPCOMPAT_V7_VERSION}"
     implementation "com.android.support.constraint:constraint-layout:${CONSTRAINT_VERSION}"
     testImplementation "junit:junit:${JUNIT_VERSION}"
     androidTestImplementation "com.android.support.test:runner:${RUNNER_VERSION}"

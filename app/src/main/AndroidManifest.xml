@@ -29,7 +29,7 @@
     <application
         android:name="com.age.mac.baselibrary.base.BaseApplication"
         android:allowBackup="true"
-        tools:replace="android:name"
+        tools:replace="android:name,allowBackup,icon,theme,label"
         android:icon="@drawable/ic_launcher"
         android:label="@string/frame_name"
         android:roundIcon="@mipmap/ic_launcher_round"

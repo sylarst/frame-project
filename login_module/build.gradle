@@ -37,6 +37,8 @@ repositories {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "com.android.support:appcompat-v7:${APPCOMPAT_V7_VERSION}"
+    implementation "com.android.support:support-v4:${SUPPORT_V4_VERSION}"
+    implementation "com.android.support:recyclerview-v7:${APPCOMPAT_V7_VERSION}"
     implementation "com.android.support.constraint:constraint-layout:${CONSTRAINT_VERSION}"
     testImplementation "junit:junit:${JUNIT_VERSION}"
     androidTestImplementation "com.android.support.test:runner:${RUNNER_VERSION}"
@@ -61,6 +63,7 @@ dependencies {
     compile "io.reactivex.rxjava2:rxjava:${RXJAVA_VERSION}"
     compile "com.squareup.retrofit2:converter-gson:${RETROFIT_VERSION}"//转换器，请求结果转换成Model
     compile "com.squareup.retrofit2:adapter-rxjava2:${RETROFIT_VERSION}"//配合Rxjava 使用
+    compile "com.github.bumptech.glide:glide:${GLIDE_VERSION}"
     //AutoDispose解决RxJava内存泄漏
     implementation "com.uber.autodispose:autodispose:${AUTO_DISPOSE_VERSION}"
     implementation "com.uber.autodispose:autodispose-android:${AUTO_DISPOSE_VERSION}"
@@ -72,6 +75,7 @@ dependencies {
     implementation project(':base_library')
 //    implementation project(':applymodule')
     implementation project(':source_library')
+    implementation project(':refresh-layout')
 //    implementation project(':login_module')
 //    implementation(name:'baselibrary', ext:'aar')
 //    implementation(name:'applymodule', ext:'aar')

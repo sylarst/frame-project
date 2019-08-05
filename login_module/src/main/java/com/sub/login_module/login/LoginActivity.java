@@ -1,6 +1,7 @@
 package com.sub.login_module.login;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
@@ -13,6 +14,8 @@ import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.example.hg.uselibrary.ArouterConfig;
 import com.sub.login_module.R;
+import com.sub.login_module.select.Select2Activity;
+import com.sub.login_module.select.SelectActivity;
 
 @Route(path = ArouterConfig.Login_loginActivity)
 public class LoginActivity extends BaseMvpActivity<LoginPresenter> implements LoginContract.View {
@@ -31,13 +34,17 @@ public class LoginActivity extends BaseMvpActivity<LoginPresenter> implements Lo
         findViewById(R.id.login_confirm).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mPresenter.login(mNameTv.getText().toString(),mPasswordTv.getText().toString());
+//                mPresenter.login(mNameTv.getText().toString(),mPasswordTv.getText().toString());
+                Intent intent=new Intent(mContext, SelectActivity.class);
+                startActivity(intent);
             }
         });
         findViewById(R.id.login_regist).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ARouter.getInstance().build(ArouterConfig.Login_registActivity).navigation();
+//                ARouter.getInstance().build(ArouterConfig.Login_registActivity).navigation();
+                Intent intent=new Intent(mContext, Select2Activity.class);
+                startActivity(intent);
             }
         });
     }

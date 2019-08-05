@@ -30,45 +30,63 @@ repositories {
     }
 }
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation "com.android.support:appcompat-v7:${APPCOMPAT_V7_VERSION}"
+    implementation "com.android.support:support-v4:${SUPPORT_V4_VERSION}"
+    implementation "com.android.support:recyclerview-v7:${APPCOMPAT_V7_VERSION}"
     implementation "com.android.support.constraint:constraint-layout:${CONSTRAINT_VERSION}"
     testImplementation "junit:junit:${JUNIT_VERSION}"
     androidTestImplementation "com.android.support.test:runner:${RUNNER_VERSION}"
     androidTestImplementation "com.android.support.test.espresso:espresso-core:${ESPRESSO_CORE_VERSION}"
+
     //------arouter
     implementation "com.alibaba:arouter-api:${AROUTER_VERSION}"
     annotationProcessor "com.alibaba:arouter-compiler:${ANNOTATIONPROCESSOR_VERSION}"
+
     //------eventbus
     implementation "org.greenrobot:eventbus:${EVENTBUS_VERSION}"
+
     //------指定版本
     configurations.all {
         resolutionStrategy.force "com.android.support:support-annotations:${APPCOMPAT_V7_VERSION}"
     }
+
     //------retrofit+okhttp+rxjava
     compile "com.squareup.retrofit2:retrofit:${RETROFIT_VERSION}"
-    compile "com.google.code.gson:gson:${GSON_VERSION}"//Gson 库
+    compile "com.google.code.gson:gson:${GSON_VERSION}"
+
+    //Gson 库
+
     //okhttp3
     implementation "com.squareup.okhttp3:okhttp:${OKHTTP_VERSION}"
     implementation "com.squareup.okhttp3:logging-interceptor:${OKHTTP_VERSION}"
+
     //下面两个是RxJava 和 RxAndroid
     compile "io.reactivex.rxjava2:rxandroid:${RXANDROID_VERSION}"
     compile "io.reactivex.rxjava2:rxjava:${RXJAVA_VERSION}"
-    compile "com.squareup.retrofit2:converter-gson:${RETROFIT_VERSION}"//转换器，请求结果转换成Model
-    compile "com.squareup.retrofit2:adapter-rxjava2:${RETROFIT_VERSION}"//配合Rxjava 使用
+    compile "com.squareup.retrofit2:converter-gson:${RETROFIT_VERSION}"
+
+    //转换器，请求结果转换成Model
+    compile "com.squareup.retrofit2:adapter-rxjava2:${RETROFIT_VERSION}"
+
+    //配合Rxjava 使用
+
     //AutoDispose解决RxJava内存泄漏
     implementation "com.uber.autodispose:autodispose:${AUTO_DISPOSE_VERSION}"
     implementation "com.uber.autodispose:autodispose-android:${AUTO_DISPOSE_VERSION}"
     implementation "com.uber.autodispose:autodispose-android-archcomponents:${AUTO_DISPOSE_VERSION}"
+
     //butterknife
     implementation "com.jakewharton:butterknife:${BUTTERKNIFE_VERSION}"
     annotationProcessor "com.jakewharton:butterknife-compiler:${BUTTERKNIFE_VERSION}"
-
     implementation project(':base_library')
     implementation project(':apply_module')
     implementation project(':source_library')
     implementation project(':login_module')
-//    implementation(name:'baselibrary', ext:'aar')
-//    implementation(name:'applymodule', ext:'aar')
+
+    //    implementation(name:'baselibrary', ext:'aar')
+
+    //    implementation(name:'applymodule', ext:'aar')
+//    implementation 'com.android.support:recyclerview-v7:28.0.0'
 }
 
