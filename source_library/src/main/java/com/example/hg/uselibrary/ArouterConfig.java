@@ -11,4 +11,5 @@ public class ArouterConfig {
     public final static String Login_registActivity = "/login/RegistActivity";
 
     public final static String Source_Posting = "/source/PostActivity";
+    //--
 }
