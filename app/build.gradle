@@ -31,9 +31,6 @@ repositories {
 }
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation "com.android.support:appcompat-v7:${APPCOMPAT_V7_VERSION}"
-    implementation "com.android.support:support-v4:${SUPPORT_V4_VERSION}"
-    implementation "com.android.support:recyclerview-v7:${APPCOMPAT_V7_VERSION}"
     implementation "com.android.support.constraint:constraint-layout:${CONSTRAINT_VERSION}"
     testImplementation "junit:junit:${JUNIT_VERSION}"
     androidTestImplementation "com.android.support.test:runner:${RUNNER_VERSION}"
@@ -46,10 +43,6 @@ dependencies {
     //------eventbus
     implementation "org.greenrobot:eventbus:${EVENTBUS_VERSION}"
 
-    //------指定版本
-    configurations.all {
-        resolutionStrategy.force "com.android.support:support-annotations:${APPCOMPAT_V7_VERSION}"
-    }
 
     //------retrofit+okhttp+rxjava
     compile "com.squareup.retrofit2:retrofit:${RETROFIT_VERSION}"
@@ -87,6 +80,9 @@ dependencies {
     //    implementation(name:'baselibrary', ext:'aar')
 
     //    implementation(name:'applymodule', ext:'aar')
-//    implementation 'com.android.support:recyclerview-v7:28.0.0'
+
+    //    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    //noinspection GradleCompatible
+    implementation "com.android.support:appcompat-v7:${APPCOMPAT_V7_VERSION}"
 }
 

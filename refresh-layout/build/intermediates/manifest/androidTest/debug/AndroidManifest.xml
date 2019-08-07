@@ -4,7 +4,7 @@
 
     <uses-sdk
         android:minSdkVersion="15"
-        android:targetSdkVersion="25" />
+        android:targetSdkVersion="28" />
 
     <instrumentation
         android:name="android.test.InstrumentationTestRunner"
@@ -13,12 +13,10 @@
         android:label="Tests for com.scwang.smartrefresh.layout.test"
         android:targetPackage="com.scwang.smartrefresh.layout.test" />
 
-    <application android:debuggable="true" >
+    <application
+        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
+        android:debuggable="true" >
         <uses-library android:name="android.test.runner" />
-
-        <meta-data
-            android:name="android.support.VERSION"
-            android:value="26.0.2" />
     </application>
 
 </manifest>
